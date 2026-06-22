@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+faker
+google-genai
+python-dotenv
+pydantic
+pandas
+openpyxl
+scrubadub
+google-auth
+pyjwt
+requests

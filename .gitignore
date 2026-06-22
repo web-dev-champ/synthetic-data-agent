@@ -1,0 +1,16 @@
+# Environments
+backend/venv/
+backend/env/
+
+# Credentials
+backend/.env
+backend/.venv
+
+# Temporary Generated Files
+backend/generated_data/*.csv
+backend/generated_data/*.xlsx
+backend/generated_scripts/*.py
+
+# Python Cache
+__pycache__/
+*.py[cod]

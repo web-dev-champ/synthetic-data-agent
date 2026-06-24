@@ -27,6 +27,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173", # Standard Vite port
         "http://127.0.0.1:5173",
+        "https://synthetic-data-agent.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"], # This explicitly allows the OPTIONS, POST, GET methods

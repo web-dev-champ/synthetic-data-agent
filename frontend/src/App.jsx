@@ -9,7 +9,7 @@ import {
   BookOpen, Sparkles, CheckCircle2, X, UploadCloud
 } from 'lucide-react';
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
 
 // MOCK COMPONENT FOR PREVIEW ENVIRONMENT
 // Remove this entirely in your local code and use the import above.

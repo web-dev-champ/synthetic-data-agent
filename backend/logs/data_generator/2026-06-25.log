@@ -1,0 +1,22 @@
+2026-06-25 02:05:50,227 - [INFO] - data_generator - Automatically deleted old file: .gitkeep
+2026-06-25 02:05:50,227 - [INFO] - data_generator - Automatically deleted old file: .gitkeep
+2026-06-25 02:05:50,237 - [INFO] - data_generator - Automatically deleted old file: data_2adc8b40-3955-4569-9d3f-e93d863f5d73.csv
+2026-06-25 02:05:50,237 - [INFO] - data_generator - Automatically deleted old file: data_2adc8b40-3955-4569-9d3f-e93d863f5d73.xlsx
+2026-06-25 02:05:50,243 - [INFO] - data_generator - Automatically deleted old file: data_5bfd4aff-9d98-4d94-82da-c9fa21e44d21.csv
+2026-06-25 02:05:50,243 - [INFO] - data_generator - Automatically deleted old file: data_5dfe9a1f-8d6b-4237-9d0e-3846649347be.csv
+2026-06-25 02:05:50,243 - [INFO] - data_generator - Automatically deleted old file: data_5dfe9a1f-8d6b-4237-9d0e-3846649347be.xlsx
+2026-06-25 02:05:50,243 - [INFO] - data_generator - Starting generation request for 250 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-25 02:05:50,255 - [INFO] - data_generator - LLM generation started
+2026-06-25 02:06:15,186 - [INFO] - data_generator - LLM generation completed
+2026-06-25 02:06:15,186 - [INFO] - data_generator - Executing dynamic script: script_8ce9736c-88ab-4614-9370-9031a7d14128.py
+2026-06-25 02:06:16,487 - [INFO] - data_generator - Python script executed successfully.
+2026-06-25 02:42:23,421 - [INFO] - data_generator - Starting generation request for 500 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-25 02:42:23,577 - [INFO] - data_generator - LLM generation started
+2026-06-25 02:42:44,875 - [INFO] - data_generator - LLM generation completed
+2026-06-25 02:42:44,878 - [INFO] - data_generator - Executing dynamic script: script_43dfafee-6acb-4d23-90fb-20580de9331c.py
+2026-06-25 02:42:46,307 - [INFO] - data_generator - Python script executed successfully.
+2026-06-25 02:50:23,016 - [INFO] - data_generator - Starting generation request for 100 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-25 02:50:23,024 - [INFO] - data_generator - LLM generation started
+2026-06-25 02:50:43,951 - [INFO] - data_generator - LLM generation completed
+2026-06-25 02:50:43,967 - [INFO] - data_generator - Executing dynamic script: script_1584745e-bab0-4617-a585-f3193df74525.py
+2026-06-25 02:50:45,100 - [INFO] - data_generator - Python script executed successfully.

@@ -14,3 +14,10 @@ backend/generated_scripts/*.py
 # Python Cache
 __pycache__/
 *.py[cod]
+backend/routes/__pycache__/
+backend/utils/__pycache__/
+backend/utils/guardrails/__pycache__/
+backend/routes/__pycache__/
+
+frontend/.env
+frontend/node_modules

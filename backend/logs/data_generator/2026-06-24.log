@@ -1,0 +1,458 @@
+2026-06-24 00:13:35,956 - [INFO] - data_generator - Starting generation request for 900 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 00:13:36,042 - [INFO] - data_generator - LLM generation started
+2026-06-24 00:13:38,640 - [ERROR] - data_generator - LLM Generation Failed due to: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 00:16:20,711 - [INFO] - data_generator - Starting generation request for 900 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 00:16:20,742 - [INFO] - data_generator - LLM generation started
+2026-06-24 00:16:22,925 - [ERROR] - data_generator - LLM Generation Failed due to: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 00:17:52,746 - [INFO] - data_generator - Starting generation request for 900 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 00:17:52,829 - [INFO] - data_generator - LLM generation started
+2026-06-24 00:17:56,137 - [INFO] - data_generator - LLM generation completed
+2026-06-24 00:17:56,144 - [INFO] - data_generator - Executing dynamic script: script_5bfd4aff-9d98-4d94-82da-c9fa21e44d21.py
+2026-06-24 00:17:57,294 - [INFO] - data_generator - Python script executed successfully.
+2026-06-24 00:22:38,507 - [INFO] - data_generator - Starting generation request for 1200 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 00:22:38,518 - [INFO] - data_generator - LLM generation started
+2026-06-24 00:22:41,931 - [INFO] - data_generator - LLM generation completed
+2026-06-24 00:23:00,892 - [INFO] - data_generator - Starting generation request for 1200 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 00:23:00,913 - [INFO] - data_generator - LLM generation started
+2026-06-24 00:23:03,749 - [INFO] - data_generator - LLM generation completed
+2026-06-24 00:23:03,760 - [INFO] - data_generator - Executing dynamic script: script_2adc8b40-3955-4569-9d3f-e93d863f5d73.py
+2026-06-24 00:23:04,919 - [INFO] - data_generator - Python script executed successfully.
+2026-06-24 00:26:59,409 - [INFO] - data_generator - Starting generation request for 1200 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 00:26:59,419 - [INFO] - data_generator - LLM generation started
+2026-06-24 00:27:02,874 - [INFO] - data_generator - LLM generation completed
+2026-06-24 00:27:15,275 - [INFO] - data_generator - Starting generation request for 1200 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 00:27:15,289 - [INFO] - data_generator - LLM generation started
+2026-06-24 00:27:17,996 - [INFO] - data_generator - LLM generation completed
+2026-06-24 00:27:18,004 - [INFO] - data_generator - Executing dynamic script: script_5dfe9a1f-8d6b-4237-9d0e-3846649347be.py
+2026-06-24 00:27:19,185 - [INFO] - data_generator - Python script executed successfully.
+2026-06-24 21:00:40,809 - [INFO] - data_generator - Starting generation request for 300 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 21:00:40,898 - [INFO] - data_generator - LLM generation started
+2026-06-24 21:00:44,648 - [ERROR] - data_generator - LLM Generation Failed due to: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 21:01:24,867 - [INFO] - data_generator - Starting generation request for 500 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 21:01:24,880 - [INFO] - data_generator - LLM generation started
+2026-06-24 21:01:49,036 - [ERROR] - data_generator - LLM Generation Failed due to: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 21:18:32,208 - [INFO] - data_generator - Starting generation request for 500 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 21:18:32,281 - [INFO] - data_generator - LLM generation started
+2026-06-24 21:18:34,862 - [ERROR] - data_generator - LLM Generation Failed due to: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 22:49:15,570 - [INFO] - data_generator - Starting generation request for 250 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 22:49:15,582 - [INFO] - data_generator - LLM generation started
+2026-06-24 22:49:17,002 - [ERROR] - data_generator - LLM Generation Failed due to: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 184, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-06-24 22:55:57,727 - [INFO] - data_generator - Starting generation request for 250 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 22:55:57,730 - [INFO] - data_generator - LLM generation started
+2026-06-24 22:56:15,727 - [INFO] - data_generator - LLM generation completed
+2026-06-24 22:56:21,703 - [INFO] - data_generator - Starting generation request for 250 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 22:56:21,708 - [INFO] - data_generator - LLM generation started
+2026-06-24 22:56:27,096 - [ERROR] - data_generator - LLM Generation Failed due to: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 23:03:45,984 - [INFO] - data_generator - Starting generation request for 250 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 23:03:45,984 - [INFO] - data_generator - LLM generation started
+2026-06-24 23:03:47,912 - [ERROR] - data_generator - LLM Generation Failed due to: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 23:08:46,096 - [INFO] - data_generator - Starting generation request for 250 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 23:08:46,096 - [INFO] - data_generator - LLM generation started
+2026-06-24 23:08:56,718 - [INFO] - data_generator - LLM generation completed
+2026-06-24 23:08:56,718 - [INFO] - data_generator - Executing dynamic script: script_7c4c7bfb-3fd8-4df6-8605-b46a6c9bcb8f.py
+2026-06-24 23:08:57,395 - [INFO] - data_generator - Python script executed successfully.
+2026-06-24 23:10:07,824 - [INFO] - data_generator - Starting generation request for 500 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 23:10:07,889 - [INFO] - data_generator - LLM generation started
+2026-06-24 23:10:30,692 - [ERROR] - data_generator - LLM Generation Failed due to: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "D:\weekend-projects\synthetic-data-agent\backend\routes\generate_data.py", line 195, in generate_synthetic_data
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 6488, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\models.py", line 4916, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1618, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1411, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1388, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\weekend-projects\synthetic-data-agent\backend\.venv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-24 23:14:35,910 - [INFO] - data_generator - Starting generation request for 500 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 23:14:35,957 - [INFO] - data_generator - LLM generation started
+2026-06-24 23:14:57,418 - [INFO] - data_generator - LLM generation completed
+2026-06-24 23:14:57,434 - [INFO] - data_generator - Executing dynamic script: script_429aebde-4d21-4d39-b3ad-0a3917142fdc.py
+2026-06-24 23:14:58,068 - [INFO] - data_generator - Python script executed successfully.
+2026-06-24 23:15:24,311 - [INFO] - data_generator - Starting generation request for 1000 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-24 23:15:24,317 - [INFO] - data_generator - LLM generation started
+2026-06-24 23:15:50,419 - [INFO] - data_generator - LLM generation completed
+2026-06-24 23:15:50,419 - [INFO] - data_generator - Executing dynamic script: script_435a9e89-6e1a-4be5-8225-73315c54f61f.py
+2026-06-24 23:15:51,048 - [INFO] - data_generator - Python script executed successfully.
+2026-06-25 01:34:25,497 - [INFO] - data_generator - Starting generation request for 100 rows by user: f2c56bac-02ac-4a64-a3da-3595f56f24e0
+2026-06-25 01:34:25,549 - [INFO] - data_generator - LLM generation started
+2026-06-25 01:34:44,390 - [INFO] - data_generator - LLM generation completed
+2026-06-25 01:34:44,423 - [INFO] - data_generator - Executing dynamic script: script_0cf4b370-1604-4130-b209-0d60c470da82.py
+2026-06-25 01:34:45,339 - [INFO] - data_generator - Python script executed successfully.

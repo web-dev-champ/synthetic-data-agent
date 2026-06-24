@@ -1,0 +1,3 @@
+2026-06-23 23:40:23,607 - [INFO] - auth - Mock login detected. Bypassing Google OAuth verification.
+2026-06-23 23:40:24,365 - [INFO] - auth - Creating new user for test.agent@example.com
+2026-06-24 00:04:13,616 - [INFO] - auth - Creating new user for abc135359@gmail.com

@@ -22,17 +22,15 @@ JWT_SECRET = os.getenv("JWT_SECRET", "super_secret_key_change_this_in_production
 
 class GoogleAuthRequest(BaseModel):
     credential: str  # The token sent from the frontend Google button
-
 @auth_router.post("/google")
 def authenticate_google_user(request: GoogleAuthRequest, db: Session = Depends(get_db)):
     try:
-        # 1. Verify the token with Google's servers
+        # 1. Verify the token strictly with Google's servers
         idinfo = id_token.verify_oauth2_token(
             request.credential, 
             requests.Request(), 
             GOOGLE_CLIENT_ID
         )
-
         email = idinfo['email']
         name = idinfo.get('name', 'Unknown User')
 
@@ -46,7 +44,6 @@ def authenticate_google_user(request: GoogleAuthRequest, db: Session = Depends(g
             db.refresh(user)
 
         # 3. Create YOUR custom backend JWT
-        # This expires in 24 hours
         expiration = datetime.datetime.utcnow() + datetime.timedelta(hours=24)
         payload = {
             "sub": user.id,

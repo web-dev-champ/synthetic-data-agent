@@ -4,7 +4,7 @@ import os
 import uvicorn
 from database import engine
 from models import Base
-
+from fastapi.middleware.cors import CORSMiddleware 
 # This will create the tables in Neon if they don't exist yet
 Base.metadata.create_all(bind=engine)
 
@@ -16,11 +16,22 @@ load_dotenv()
 
 # Initialize FastAPI
 app = FastAPI(title="Synthetic Data Agent API")
-
-
 # Dynamically include all routers from the list
 for router in api_routers:
     app.include_router(router)
+
+# the CORS Middleware block
+app.add_middleware(
+    CORSMiddleware,
+    # Allow the exact URLs your frontend runs on
+    allow_origins=[
+        "http://localhost:5173", # Standard Vite port
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"], # This explicitly allows the OPTIONS, POST, GET methods
+    allow_headers=["*"], # This allows your Authorization/Bearer tokens to pass through
+)
 
 @app.get("/")
 def read_root():

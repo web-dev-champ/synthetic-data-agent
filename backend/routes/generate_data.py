@@ -12,6 +12,7 @@ import uuid
 import pandas as pd
 from sqlalchemy.orm import Session
 from typing import List, Optional
+import datetime
 
 # Security Guardrails
 from utils.guardrails.input_scanner import sanitize_input
@@ -22,6 +23,26 @@ from database import get_db
 from models import ExecutionLog, ExceptionLog, GeneratedFile
 from utils.logger import get_custom_logger
 
+def cleanup_old_files():
+    """Deletes files older than 24 hours to save server space."""
+    now = time.time()
+    # 24 hours in seconds
+    max_age_sec = 24 * 60 * 60 
+    
+    folders_to_clean = [SCRIPTS_DIR, OUTPUT_DIR]
+    
+    for folder in folders_to_clean:
+        for filename in os.listdir(folder):
+            file_path = os.path.join(folder, filename)
+            # Check file age
+            if os.path.isfile(file_path):
+                file_age = os.path.getmtime(file_path)
+                if now - file_age > max_age_sec:
+                    try:
+                        os.remove(file_path)
+                        logger.info(f"Automatically deleted old file: {filename}")
+                    except Exception as e:
+                        logger.error(f"Failed to delete {filename}: {e}")
 # ---------------------------------------------------------
 # AUTHENTICATION 
 # This tells FastAPI to look for a "Bearer <token>" header.
@@ -133,6 +154,7 @@ def generate_synthetic_data(
     db: Session = Depends(get_db),
     current_user_id: str = Depends(check_rate_limit) # <-- Update this line
 ):
+    cleanup_old_files()
     start_time = time.time()
     logger.info(f"Starting generation request for {request.num_rows} rows by user: {current_user_id}")
     
@@ -162,7 +184,7 @@ def generate_synthetic_data(
     output_csv_path = os.path.join(OUTPUT_DIR, unique_csv_name).replace("\\", "/")
     
     # --- PROMPT PREPARATION ---
-    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-pro")
     
     formatted_columns = "\n".join(
         [f"- Column: '{col.col_name}' | Type: {col.datatype} | Logic: {col.desc}" for col in request.columns]
@@ -245,7 +267,6 @@ def generate_synthetic_data(
             "message": f"Successfully generated {request.num_rows} rows!",
             "filename": unique_csv_name
         }
-        
     except Exception as e:
         # Save Failed History to Database
         db.add(GeneratedFile(
@@ -263,10 +284,12 @@ def generate_synthetic_data(
         db.add(ExceptionLog(component="data_generator", error_message=error_msg, stack_trace=traceback.format_exc()))
         db.commit()
         
+        # If it's already an HTTP Exception (like your 400 guardrail checks), let it pass through
         if isinstance(e, HTTPException): raise e
-        return {"status": "error", "message": "An error occurred during generation.", "details": error_msg}
-
-
+        
+        # THE FIX: Raise an HTTP 500 Server Error instead of returning a 200 OK
+        raise HTTPException(status_code=500, detail=f"Generation failed: {error_msg}")
+    
 # ---------------------------------------------------------
 # 2. DOWNLOAD API
 # ---------------------------------------------------------
